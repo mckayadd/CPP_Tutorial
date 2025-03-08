@@ -1,0 +1,2 @@
+* Better to write the namespace with :: as we may not use single namespace throughout a program. 
+*  
