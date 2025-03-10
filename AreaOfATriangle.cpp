@@ -9,7 +9,8 @@ int main(){
     std::cin >> base;
     std::cout << "Enter the height of the triangle: ";
     std::cin >> height;
-    area = 0.5 * base * height; // Clever to use 0.5 as it doesn't require a cast to float
+    area = 0.5f * base * height; // Clever to use 0.5 as it doesn't require a cast to float
+    // f is used to specify a float constant. Otherwise, it is considered as a double constant.
     std::cout << "The area of the triangle with base " << base << " and height " << height << " is " << area << std::endl;
     return 0;
 }

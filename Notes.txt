@@ -1,2 +1,13 @@
 * Better to write the namespace with :: as we may not use single namespace throughout a program. 
-*  
+*  Overflow: 
+    char x = 127;
+    std::cout << (int)x << std::endl; // prints 127
+    x++;
+    std::cout << (int)x << std::endl; // prints -128
+
+* Dynamic decleration of variables allows you to use variables wherever they needed. 
+    This improves efficiency as the declared variable will be removed after its scope ends. 
+    You can define a variable inside an if statement, just like you do in for loops. 
+
+* In switch case statement, a fall-thru means executing next case in the absence of a break. 
+
