@@ -42,6 +42,12 @@ P max2(P a, Q b){
     }
 }
 
+// Default arguments can be used in functions to provide default values for parameters.
+// This way, we can avoid funtion overloading for different number of parameters.
+int max3 (int a = 0, int b = 0, int c = 0){
+    return a > b ? (a > c ? a : c) : (b > c ? b : c);
+} 
+
 
 // this example shows how to use a template function to avoid writing multiple functions with the same body.
 // The template function can be used with any data type.
@@ -63,6 +69,11 @@ int main(){
     std::cout << max2(a, d) << " (different data types)" << std::endl; 
     // The return type is chosen based on the first parameter, so the return type is int.
     // This will print 20
+
+    std::cout << max3(5, 10, 15) << std::endl; // This will print 15
+    std::cout << max3(5, 10) << std::endl; // This will print 10
+    std::cout << max3(5) << std::endl; // This will print 5
+    std::cout << max3() << std::endl; // This will print 0, this is because the default values are 0 (the value of C in this case).
 
     return 0;
 }
