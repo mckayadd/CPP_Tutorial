@@ -10,4 +10,30 @@
     You can define a variable inside an if statement, just like you do in for loops. 
 
 * In switch case statement, a fall-thru means executing next case in the absence of a break. 
+    int and char are the allowed data types in cases. 
+    In else if ladder, multiple conditions are checked. 
+        in switch case it will directly jump to the case statement. So switch is faster than else if ladder
+
+* For loop is used when the number of iterations are known in advance. 
+
+* The declared variables are allocated in stack. When you declare a pointer and allocate space using new, it is allocated from heap. 
+    You need to delete the allocated memory from heap yourself. 
+    Otherwise it will be kept until as long as program is running. 
+    Stack varia are deleted automotically. 
+
+* Some problems when using pointers: 
+    - Uninitilized pointer
+    - Memory leak
+    - Dangling pointer
+
+    Java and .NET deals with such issues. CPP doesn't. This is more powerfull. But you need to be careful. 
+
+* Reference: 
+    It is like creating an alias. The same memory location is used. 
+    x = 10; 
+    int &y = x; // y can be used instead of x afterwards
+    // if you print &x and &y, they are the same
+    // once the reference is defined, it cannot be reinitialized for another variable:
+    //  for example, &y = z; is not possible as we first assigned x to y. 
+    // int &y; is also invalid, as decleration of a reference is not possible without initialization
 
