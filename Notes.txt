@@ -37,3 +37,8 @@
     //  for example, &y = z; is not possible as we first assigned x to y. 
     // int &y; is also invalid, as decleration of a reference is not possible without initialization
 
+* size of a pointer is independent of its data type. int *p1; or float *p2; or char *p3; all takes 8 bytes in latest compilers. 
+    (assuming that pointer takes 2 bytes to make explanation simple)
+
+* int x=10; int *y=&x; int * &z=y; // x is a variable. y is a pointer variable, pointing to x. z is a reference to a pointer variable. 
+    // int *&z=y; means z is another name of y. now y and z are 2 names of same pointer.   
