@@ -41,4 +41,37 @@
     (assuming that pointer takes 2 bytes to make explanation simple)
 
 * int x=10; int *y=&x; int * &z=y; // x is a variable. y is a pointer variable, pointing to x. z is a reference to a pointer variable. 
-    // int *&z=y; means z is another name of y. now y and z are 2 names of same pointer.   
+    // int *&z=y; means z is another name of y. now y and z are 2 names of same pointer.  
+
+*  int x = 9;  // Global variable
+
+int main() {
+    int x = 10;  // Local variable inside main()
+
+    cout << x + ::x;  // Using `::x` to refer to the global variable
+}
+
+* Thinking in modular programming vs. OOP: modular you think as the functions. In objects, objects have functions and data related to those functions. 
+
+* Principles of OOP:
+    - Abstraction
+    - Encapsulation
+        .Data Hiding
+    - Inheritance
+    - Polymorphism
+
+* Abstraction: About a class, I only know the functions of it. 
+    I only know the name of it, no idea how it works (until I need to go into the implementation details.)
+    We use printf, but we don't know the implementation of it
+    (of course it can be written by every programmer but you usually don't need it)
+
+* Encapsulation: Data is encapsulated, functions are visible. 
+    It is for avoiding mishandling. Unintentional changes. It has nothing to do with security. 
+    Data is private, functions are public. 
+
+* Inheritance: a class inherites features from the parent and can have more... 
+
+* Polymorphism: allows a single interface to represent multiple forms of behaviors. 
+    Function overloading and method overriding are allowed by polymorphism.
+
+ 
