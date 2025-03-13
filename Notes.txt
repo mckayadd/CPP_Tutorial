@@ -74,4 +74,44 @@ int main() {
 * Polymorphism: allows a single interface to represent multiple forms of behaviors. 
     Function overloading and method overriding are allowed by polymorphism.
 
- 
+* Scope resolution operator can be used, for example, to define a function body outside the class. 
+    Let's say the function is declared inside a class. It is possible to use scope resolution to 
+    define the function body outside. 
+
+    class Rectangle{
+        int perimeter();
+    }
+
+    int Rectangle::perimeter(){
+        return 2*(width + height)
+    }
+
+* It is a good practice in C++ to declare a function inside a class and define it outside using 
+    the scope resolution operator (::). This approach enhances code clarity, organization, and 
+    maintainability.
+
+    ✅ 1. Improves Readability and Maintainability
+        Declaring function prototypes inside the class provides a clear interface.
+        Keeping definitions outside the class keeps the class definition clean and readable.
+    ✅ 2. Reduces Compilation Dependencies
+        If the function definition is in a separate .cpp file, it reduces code recompilation when changes are made.
+    ✅ 3. Useful for Large Functions
+        If a function is long or complex, defining it outside prevents cluttering the class definition.
+    ✅ 4. Enables Separate Compilation
+        The class declaration (.h file) can be included in multiple files without duplicating large function bodies.
+
+* An inline function suggests that the compiler replaces the function call with its actual code, eliminating the overhead of function calls.
+    If a function is defined inside the class, it becomes inline. 
+    If declared inside and defined outside, becomes outline. 
+    If declared inside with the keyword "inline", becomes inline. 
+
+    Inline works like it becomes the part of the main function. Outline, the compiler calss the function inside the main. 
+
+* In C struct you can have data, but not functions. In CPP, both are allowed. 
+
+* Struct vs. Class: In struct everything, data and functions, is public by default. In Class, it is by default private. 
+
+* Each bject will consume memory for data members. 
+    Functions, however, will be common for all the objects in memory.
+
+* Operator overloading: e.g., + operator can be overloaded for adding: two matrices A + B, two complex numbers ... 
