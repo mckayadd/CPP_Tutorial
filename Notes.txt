@@ -115,3 +115,38 @@ int main() {
     Functions, however, will be common for all the objects in memory.
 
 * Operator overloading: e.g., + operator can be overloaded for adding: two matrices A + B, two complex numbers ... 
+
+* There are a rectangle class, a cuboid class from the rectangle, and a table class has a rectangle object inside. 
+    - cuboid isA rectangle
+    - table hasA rectangle
+
+* Access specifiers: public, private, protected
+    - Upon object, you can only access public members. 
+    - A derived class cannot access private members of the base class, can access to protected and public. 
+    
+    Table: 
+    Inside class:               private ✅    protected ✅   public ✅
+    Inside derived class:       private ❌    protected ✅   public ✅
+    On object:                  private ❌    protected ❌   public ✅
+
+    - Things are actually accessible but not directly modifiable. 
+        e.g. d.length = 10 is not allowed, but getLength() can be used ... 
+
+
+* There are also multilevel and multiple inheritance (this one is not provided in java)
+    - multilevel: A <- B <- C
+    - multiple: A <-C, B <- C 
+
+* Generalization: the term "shape" is a generalization of e.g. circle, rectangle, triangle... 
+    We cannot define a shape without the derived classes: shape itself does not exist. 
+    So there is a bottom up relation: we find a general term to define circle, rectangle ...
+
+  Specialization: there exists a rectangle class, and we derived a cuboid class, which is a special 
+    version of it. So, there is a top down approach. 
+
+    - Purpose of generalization is polymorphism, purpose of specialization is share the features to child classes
+    In generalization, parent class doesn't have much to be inherited. Mostly conceptual. 
+    
+* We declare a base class pointer and make it point to a child class object.  
+
+* Overriding: same functionality, but the function is defined in its own way. 

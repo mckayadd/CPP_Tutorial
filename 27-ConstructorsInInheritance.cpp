@@ -24,10 +24,10 @@ public:
 };
 
 int main() {
-    // Derived d1; // This will call the default constructor of the Base class and the default constructor of the Derived class.
+    Derived d1; // This will call the default constructor of the Base class and the default constructor of the Derived class.
     // This happens because the default constructor of the Base class is called by default when the Derived class is created.
     Derived d2(5);
-    // Derived d3(5, 10);
+    Derived d3(5, 10);
 
     // When an object of a derived class is created, the base class's constructor is 
         // always called first before the derived class's constructor executes. 
