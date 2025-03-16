@@ -150,3 +150,35 @@ int main() {
 * We declare a base class pointer and make it point to a child class object.  
 
 * Overriding: same functionality, but the function is defined in its own way. 
+
+* There are 3 types of base classes in C++ based on having the functions as concrete or virtual:
+
+    - All concrete -> reusability 
+    - Some concrete, some pure virtual -> reusability, polymorphism (abstract)
+    - All pure virtual -> polymorphism (abstract)
+
+* Runtime Polymorphism is achieved using base class pointer to derived class object and override method is called
+
+* A friend function/class can help to access private and protected members of a class upon object. 
+    This is useful in operator overloading. 
+
+* Static members can be used as:
+    - counters
+    - shared memory (so one object can write and others read)
+    - information about the class (same information for all objects)
+
+* Static member functions can be called using class name and also using object
+
+* Inner classes: useful for dividing the outer class into smaller pieces. 
+    e.g., LinkedList class can have a Head class inside. 
+    Be careful about its visibility, if it is defined as private, then not accessible from outside of the outer class. 
+
+* Errors:
+    Syntax -> Compiler                  (Programmer)
+    Logical -> Debugger                 (Programmer)
+    Runtime -> Exception handling       (User: e.g., driver doesn't put enough fuel into the car, car need to warn...)
+
+* One benefit of using exceptions: they allow communication between functions, 
+    e.g. a function cannot finish its execution successfully because of a problem, 
+    so it throws an exception instead of returning a certain value. 
+    The caller function is notified this way that something went wrong. 
