@@ -6,7 +6,7 @@ template<class T>
 class Stack{
 
     private:
-    int *stk;
+    T *stk;
     int top;
     int size;
     public:
@@ -48,9 +48,16 @@ T Stack<T>::pop(){
 
 int main(){
     Stack<int> s(10);
-    s.push(10);
-    s.push(20);
-    s.push(30);
+    s.push(1);
+    s.push(2);
+    s.push(3);
     s.pop();
+
+    Stack<float> s2(10);
+    s2.push(1.5);
+    s2.push(2.5);
+    s2.push(3.5);
+    s2.pop();
+
     return 0;
 }
