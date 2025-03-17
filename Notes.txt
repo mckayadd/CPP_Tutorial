@@ -182,3 +182,36 @@ int main() {
     e.g. a function cannot finish its execution successfully because of a problem, 
     so it throws an exception instead of returning a certain value. 
     The caller function is notified this way that something went wrong. 
+
+* A lambda expression in C++ is an anonymous function (a function without a name) that can be used inline. It allows you to define small functions quickly without needing to declare them separately.
+    [ capture ] ( parameters ) -> return_type { function_body };
+    
+    // -------------
+
+    auto greet = []() {
+        std::cout << "Hello, Lambda!" << std::endl;
+    };
+
+    greet();  // Calls the lambda function
+
+    // -------------
+
+    auto add = [](int a, int b) {
+    return a + b;
+    };
+
+    std::cout << add(3, 5);  // Output: 8
+
+* Smart pointers in C++ are wrapper classes around raw pointers that automate memory management by 
+    ensuring that dynamically allocated memory is properly deallocated when it's no longer needed. 
+    They help prevent memory leaks and dangling pointers.
+
+Smart Pointer       |	Purpose                                                             |	Usage
+-----------------------------------------------------------------------------------------------------------------------------
+std::unique_ptr<T>  |	Exclusive ownership (only one pointer can own the object at a time) |	Fast and safe
+std::shared_ptr<T>  |	Shared ownership (multiple pointers can share ownership)            |	Uses reference counting
+std::weak_ptr<T>    |   Non-owning reference to a shared_ptr                                |	Prevents circular references
+
+* Ellipses: to be able to variable number of arguments
+
+int sum(int n, ...)
