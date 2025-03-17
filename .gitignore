@@ -1,0 +1,56 @@
+# Ignore build directories
+/build/
+/bin/
+/obj/
+/out/
+/dist/
+/CMakeFiles/
+/CMakeCache.txt
+
+# Ignore compiled object files, executables, and shared libraries
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+
+# Ignore core dumps and debugging files
+core
+*.dSYM/
+*.stackdump
+*.swp
+*.swo
+
+# Ignore dependency files
+*.d
+*.dep
+*.gcda
+*.gcno
+*.gcov
+
+# Ignore CMake-generated files
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore system files
+.DS_Store   # macOS Finder metadata file
+Thumbs.db   # Windows thumbnail database
