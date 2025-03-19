@@ -1,0 +1,9 @@
+# version: "3.8"
+
+services:
+  prime-checker:
+    build: .
+    container_name: prime_checker
+    entrypoint: ["./build/my_program"]
+    stdin_open: true # Keep container interactive
+    tty: true # Allocate a pseudo-TTY
