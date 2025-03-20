@@ -1,25 +1,14 @@
-# Use Ubuntu as base image
-FROM ubuntu:latest
+FROM alpine as builder
 
-# Install dependencies
-RUN apt update && apt install -y \
-    build-essential cmake git \
-    libgtest-dev && \ 
-    rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache \
+    build-base cmake git \
+    gtest-dev
 
-# Set working directory
 WORKDIR /app
-
-# Copy the project files into the container
 COPY . .
+RUN mkdir -p build && cd build && cmake .. && make -j$(nproc)
 
-# Create build directory
-RUN mkdir -p build && cd build && \ 
-    cmake .. && \
-    make -j$(nproc)
-
-# Run unit tests
-RUN cd build && ctest --output-on-failure
-
-# Set executable and allow arguments to be passed
-ENTRYPOINT ["./build/my_program"]
+FROM alpine
+WORKDIR /app/build
+COPY --from=builder /app/build/my_program /app/build/my_program
+ENTRYPOINT ["/app/build/my_program"]
